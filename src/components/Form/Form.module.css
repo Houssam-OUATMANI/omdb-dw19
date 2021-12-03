@@ -1,0 +1,15 @@
+.container {
+    padding: 1rem;
+}
+
+.container p {
+    display: block;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    background-color: orangered;
+    padding: 1rem 2rem;
+    width: 35%;
+    margin:  0 auto 1rem auto;
+}
+

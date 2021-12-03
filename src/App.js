@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {useState} from 'react'
+import Main from "./pages/Main";
+import FormContext from "./context/formContext";
 function App() {
+
+  const [toogle, setToggle] = useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FormContext.Provider value={{toggle : toogle, setToggle : setToggle}}>
+      <div className="App">
+        <Main />
+      </div>
+    </FormContext.Provider>
   );
 }
 
